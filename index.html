@@ -30,25 +30,30 @@
     /* The images themselves */
     .image-container img {
       display: block;
-      width: 300px;   /* Adjust as needed */
-      height: auto; 
+      width: 300px;  /* Adjust as needed */
+      height: auto;
     }
 
-    /* Small badge in the top-left corner for numbering */
+    /*
+     * Center the number in the middle of the image.
+     * top: 50% and left: 50% sets the starting point;
+     * transform: translate(-50%, -50%) shifts it perfectly center.
+     */
     .logo-number {
       position: absolute;
-      top: 10px;
-      left: 10px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       background-color: rgba(255, 255, 255, 0.85);
-      padding: 3px 8px;
+      padding: 5px 10px;
       border-radius: 3px;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: bold;
       color: #333;
       pointer-events: none;
     }
 
-    /* Watermark in the bottom-right corner (much larger now) */
+    /* Watermark in the bottom-right corner (still large) */
     .watermark {
       position: absolute;
       bottom: 10px;
@@ -56,7 +61,7 @@
       color: rgba(255, 255, 255, 0.9);
       background-color: rgba(0, 0, 0, 0.4);
       padding: 10px;
-      font-size: 32px;  /* Increased font size */
+      font-size: 32px;  /* Large watermark */
       font-weight: bold;
       pointer-events: none;
     }
@@ -65,7 +70,7 @@
 <body>
   <h1>E.S.C.O Logo Showcase</h1>
 
-  <!-- Image 0 (if you have a base "ESCO.png" without a parenthesis) -->
+  <!-- Image 0 -->
   <div class="image-container">
     <img src="ESCO.png" alt="E.S.C.O Logo 0">
     <div class="logo-number">#0</div>
