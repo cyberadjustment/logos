@@ -27,11 +27,13 @@
       vertical-align: top;
     }
 
+/* The images themselves */
 .image-container img {
   display: block;
-  width: auto;  /* Keep original width */
-  height: auto; /* Keep original height */
+  max-width: 100%;  /* Ensures images are responsive but do not exceed their original size */
+  height: auto;     /* Maintains aspect ratio */
 }
+
 
     /*
      * Center the number in the middle of the image.
